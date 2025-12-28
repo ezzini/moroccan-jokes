@@ -31,3 +31,28 @@ Run these commands in your terminal inside the `jokes_site` folder.
 ## Step 4: Done!
 Wait a minute or two. GitHub will verify and deploy your site.
 You will see a link like: `https://YOUR-USERNAME.github.io/moroccan-jokes/`
+
+## Troubleshooting (404 Error)
+If you see a **404 File Not Found** error:
+
+1.  **Wait a few minutes**: It can take up to 10 minutes for the first deployment.
+2.  **Check "Actions" Tab**:
+    - Go to your repository on GitHub.
+    - Click the **Actions** tab at the top.
+    - Click the latest workflow run (usually "pages build and deployment").
+    - If it's red (Failed), click it to see why.
+3.  **Check Settings**:
+    - Go to **Settings > Pages**.
+    - Ensure **Source** is "Deploy from a branch" and **Branch** is "main" / "/ (root)".
+4.  **Bypass Jekyll**:
+    - GitHub tries to use Jekyll by default. Create an empty file named `.nojekyll` in your folder and push it.
+    - Run this in terminal:
+      ```bash
+      New-Item -ItemType file .nojekyll
+      git add .nojekyll
+      git commit -m "Add nojekyll"
+      git push
+      ```
+5.  **Check File Location**:
+    - Ensure `index.html` is at the very top of your repository code, not inside a subfolder.
+
