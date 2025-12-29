@@ -35,7 +35,12 @@ You will see a link like: `https://YOUR-USERNAME.github.io/moroccan-jokes/`
 ## Troubleshooting (404 Error)
 If you see a **404 File Not Found** error:
 
-1.  **Wait a few minutes**: It can take up to 10 minutes for the first deployment.
+1.  **Check Repository Visibility** (CRITICAL):
+    - **Your repository must be Public** for GitHub Pages to work on the free plan.
+    - If it is **Private**, the 404 is expected unless you upgrade to GitHub Pro.
+    - Check the badge next to your repo name at the top left. If it says "Private", go to **Settings > General > Danger Zone > Change visibility** -> Make Public.
+
+2.  **Wait a few minutes**: It can take up to 10 minutes for the first deployment.
 2.  **Check "Actions" Tab**:
     - Go to your repository on GitHub.
     - Click the **Actions** tab at the top.
